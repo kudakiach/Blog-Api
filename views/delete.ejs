@@ -1,0 +1,22 @@
+<%- include("_header") -%>
+
+
+<div class="col-md-8 offset-md-2">
+<h1 class="">Delete a record?</h1>
+<form action="/delete/<%= model.ID %>" method="post">
+  <div class="form-horizontal">
+
+    <%- include("_display") -%>
+
+    <div class="form-group mt-4">
+     
+      <div class="">
+        <input type="submit" value="Delete" class="btn btn-default btn-danger" />
+        <a class="btn btn-outline-dark cancel" href="/">Cancel</a>
+      </div>
+    </div>
+  </div>
+</form>
+</div>
+
+<%- include("_footer") -%>

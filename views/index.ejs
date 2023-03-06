@@ -1,0 +1,32 @@
+<%- include("_header") -%>
+    
+
+<div class="container-fluid">
+    <div class="col-md-8 offset-md-2">
+        
+       <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Title</th>
+      <th scope="col">sub Title</th>
+      <th scope="col">Author</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% for(const row of model) {%>
+    <tr>
+      <th scope="row"><%= row.ID %></th>
+      <td><%= row.Title %></td>
+      <td> <%= row.SubTitle %></td>
+      <td><%= row.Author %></td>
+      <td><a class="btn btn-sm btn-warning" href="/edit/<%= row.ID %>">Edit</a>
+            <a class="btn btn-sm btn-danger" href="/delete/<%= row.ID %>">Delete</a></td>
+    </tr>
+    <% } %>
+  </tbody>
+</table>
+
+<!-- Footer -->
+<%- include("_footer") -%>

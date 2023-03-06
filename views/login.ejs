@@ -1,0 +1,24 @@
+
+<%- include("_header") -%>
+    <div class="container">
+        <div class="col-md-6 offset-md-3">
+            <div class="">
+                <form action="/login" method="post">
+                    <div class="form-group mt-2">
+                      <label class="col-form-label " for="Author">Username</label>
+                      <div >
+                        <input class="form-control" id="username" name="username" />
+                      </div>
+                    </div>
+                    <div class="form-group mt-2">
+                      <label class="col-form-label " for="Author">Password</label>
+                      <div >
+                        <input type="password" class="form-control" id="password" name="password" />
+                      </div>
+                    </div>
+                    <input type="submit" value="Login" class="form-control btn btn-primary mt-4" name="password" />
+                </form>
+            </div>
+        </div>
+    </div>
+

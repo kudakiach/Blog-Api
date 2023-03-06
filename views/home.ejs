@@ -1,0 +1,41 @@
+<%- include("_header") -%>
+    
+
+<div class="container-fluid">
+    <div class="col-md-8 offset-md-2">
+        
+      <div class="row" style="gap: 10px;">
+        
+     
+    <% for(const row of model) {%>
+   <div class="col-md-4" style="box-shadow:2px 3px 5px #aaa; padding: 15px;">
+      <h3 class="h3"><%= row.Title %></h3>
+      <div class="d-flex">
+        <p style="font-size: 13px; font-weight: bold; color:#909090; margin-left:0px"><%=row.Author %></p>
+        <p style="font-size: 13px; font-weight: bold; color:#909090; margin-left:25px"><%=row.CreatedOn %></p>
+        <p style="font-size: 13px; font-weight: bold; color:#909090; margin-left:25px"><%=row.Likes %> Likes</p>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title" style="color:#777777"><%= row.SubTitle %></h5>
+        <p class="card-text"><%= row.Post %></p>
+       
+          
+          
+             <div class="d-flex justify-content-start">
+              <form action="/update/<%= row.ID %>" method="post">
+                 <button type="submit" class="btn  btn-sm btn-primary mx-2">Like</button>
+              </form>
+              
+               <button class="btn"> <%=row.Likes %></button>  
+             </div>
+         
+       
+        
+      </div>
+    </div>
+     
+    <% } %>
+     </div>
+  
+<!-- Footer -->
+<%- include("_footer") -%>

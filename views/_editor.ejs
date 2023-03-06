@@ -1,0 +1,26 @@
+<div class="form-group mt-2">
+  <label class="col-form-label " for="Title">Title</label>
+  <div class="">
+    <input autofocus class="form-control" name="Title" value="<%= model?.Title %>" />
+  </div>
+</div>
+<div class="form-group mt-2">
+  <label class="col-form-label " for="Title">Sub Title</label>
+  <div class="">
+    <input autofocus class="form-control" name="SubTitle" value="<%= model?.SubTitle %>" />
+  </div>
+</div>
+
+<div class="form-group mt-2">
+  <label class="col-form-label " for="Author">Author</label>
+  <div >
+    <input class="form-control" name="Author" value="<%= model?.Author %>" />
+  </div>
+</div>
+
+<div class="form-group mt-2">
+  <label class="col-form-label" for="Comments">Comments</label>
+  <div class="">
+    <textarea class="form-control" cols="20" name="Post" maxlength="32000" rows="7"><%= model?.Post %></textarea>
+  </div>
+</div>
